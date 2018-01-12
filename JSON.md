@@ -32,3 +32,118 @@ The JSON object includes the following properties/objects:
       * "variables" : list : list of the variables in the text
         * "name" : string : name of the variable as it shows up in the text
         * "type" : string : type of the variable being string, number, etc.
+
+`
+{
+    "org_name" : "",
+    "sections" : [
+        {
+        "order": 1,
+        "id" : "security_policy",
+        "name" : "Create Security Policy",
+        "subsections" :
+            [
+                {
+                "order" : 1,
+                "id": "purpose",
+                "title" : "Purpose",
+                "heading": "The purpose",
+                "include" : "",
+                "inputs": [],
+                "content" :
+                    [
+                        {
+                        "text":"This document outlines [org_name]’s Security Policy and Strategy and it is meant to ensure the Digital and Physical security of [org_name] and its members.",
+                        "variables":
+                            [
+                                {
+                                "org_name":
+                                    {
+                                    "type": "text"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                        "text":"Our intention for [org_name]’s Security Policy and Strategy is not to impose restrictions that are contrary to our established culture of openness, trust and integrity. We are committed to protecting [org_name]’s employees, partners and the company.",
+                        "variables":
+                            [
+                                {
+                                "org_name":
+                                    {
+                                    "type": "text"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                        "text":"Effective security is a team effort involving the participation and support of every employee and affiliate who deals with information and/or information systems. It is the responsibility of every individual to know these guidelines, and to conduct their activities accordingly.",
+                        "variables": []
+                        },
+                        {
+                        "text":"In short, the primary purpose of this policy is: to preserve [org_name]’s security, i.e. the preservation of confidentiality, integrity and availability of [org_name]’s information assets, to ensure that [org_name] complies with contractual and legal requirements, and to prevent damage to [org_name]’s reputation",
+                        "variables":
+                            [
+                                {
+                                "org_name":
+                                    {
+                                    "type": "text"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                "order" : 2,
+                "id": "staff_relevance",
+                "title" : "Staff Relevance",
+                "heading": "",
+                "include" : "apply_to_staff",
+                "inputs":
+                    [
+                        {
+                        "id" : "apply_to_staff",
+                        "type" : "radios",
+                        "value" : "",
+                        "heading" : "Does this apply to all staff?",
+                        "options" :
+                            [
+                                {
+                                "id" : 1,
+                                "title" : "Yes",
+                                "value" : 1
+                                },
+                                {
+                                "id" : 2,
+                                "title" : "No",
+                                "value" : 2
+                                }
+                          ],
+                        }
+                    ], 
+                "content" :
+                    [
+                        {
+                        "text" : "The policy applies to all staff, whether directly or indirectly employed or otherwise under the control of [org_name].",
+                        "variables":
+                            [
+                                {
+                                "org_name":
+                                    {
+                                    "type": "text"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                        "text" : "All employees, contractors, consultants, temporary, and other workers are responsible for exercising good judgment regarding appropriate use of information, electronic devices, and network resources in accordance with policies and standards, and local laws and regulation.",
+                        "variables": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+`
