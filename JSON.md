@@ -33,7 +33,7 @@ The JSON object includes the following properties/objects:
         * "name" : string : name of the variable as it shows up in the text
         * "type" : string : type of the variable being string, number, etc.
 
-`
+```json
 {
     "org_name" : "",
     "sections" : [
@@ -146,4 +146,4 @@ The JSON object includes the following properties/objects:
         }
     ]
 }
-`
+```
