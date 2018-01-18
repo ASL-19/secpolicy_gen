@@ -57,10 +57,8 @@ The JSON object includes the following properties/objects:
                         "variables":
                             [
                                 {
-                                "org_name":
-                                    {
-                                    "type": "text"
-                                    }
+                                "name": "org_name",
+                                "type": "text"
                                 }
                             ]
                         },
@@ -69,10 +67,8 @@ The JSON object includes the following properties/objects:
                         "variables":
                             [
                                 {
-                                "org_name":
-                                    {
-                                    "type": "text"
-                                    }
+                                "name": "org_name",
+                                "type": "text"
                                 }
                             ]
                         },
@@ -85,10 +81,8 @@ The JSON object includes the following properties/objects:
                         "variables":
                             [
                                 {
-                                "org_name":
-                                    {
-                                    "type": "text"
-                                    }
+                                "name": "org_name",
+                                "type": "text"
                                 }
                             ]
                         }
@@ -129,10 +123,8 @@ The JSON object includes the following properties/objects:
                         "variables":
                             [
                                 {
-                                "org_name":
-                                    {
-                                    "type": "text"
-                                    }
+                                "name": "org_name",
+                                "type": "text"
                                 }
                             ]
                         },
