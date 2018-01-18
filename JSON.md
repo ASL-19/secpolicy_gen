@@ -20,7 +20,7 @@ The JSON object includes the following properties/objects:
     * "include" : string : Whether to include this subsection in the generated policy or not. It contains the ID of the field that dictates the inclusion, and if empty it includes it anyway
     * "inputs" : list : List of inputs to present to user
       * "id" : string : ID to distinguish this input from other inputs, shall be a unique name
-      * "type" : string : Different type of supported inputs "[text|radios|checkboxes]"
+      * "type" : string : Different type of supported inputs "[text|radio|checkbox]"
       * "value" : string : The default value for the input
       * "heading" : string : Heading to be shown on the input
       * "options" : list : List of options for radio buttons or checkboxes
