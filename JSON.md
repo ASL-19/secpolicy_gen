@@ -17,7 +17,7 @@ The JSON object includes the following properties/objects:
     * "id" : string : ID to distinguish this subsection from other subsections, shall be a unique name
     * "title" : string : Title of the subsection
     * "heading" : string : Heading for the whole subsection contents
-    * "include" : string : Whether to include this subsection in the generated policy or not. It contains the ID of the field that dictates the inclusion, and if empty it includes it anyway
+    * "include" : string : Whether to include this subsection in the generated policy or not. It contains the ID of the field that dictates the inclusion. In case it is empty the subsection is included regardless.
     * "inputs" : list : List of inputs to present to user
       * "id" : string : ID to distinguish this input from other inputs, shall be a unique name
       * "type" : string : Different type of supported inputs "[text|radio|checkbox]"
