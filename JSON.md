@@ -6,36 +6,131 @@ The hierarchy of the sections is limited to two (2) layers, namely sections and 
 Content text contains limited number of variables to substitute, which are provided by the JSON file or by the user.
 Each section will be represented as a page with subsections in collapsible paragraphs.
 
+## JSON object
 The JSON object includes the following properties/objects:
-* "org_name" : string : default name of the organization
+* List of properties (key, value) that are variables in the templates, for example *org_name*, *org_execdir*, *org_opsdir*, *staff_secpol*
+* List of inputs (radio buttons, checkbox inputs, textboxes and textareas), which represent inputs that asks the user for their inputs to replace the corresponsing variables in the templates
 * "sections" : list : contains a list of section objects for the policy
-  * "order" : number : order to show this section on the page
-  * "id" : string : ID to distinguish this section from other sections, shall be a unique name
-  * "title" : string : Title of the section
-  * "subsections" : list : list of subsections for this section
-    * "order" : number : order to show this subsection on the page
-    * "id" : string : ID to distinguish this subsection from other subsections, shall be a unique name
-    * "title" : string : Title of the subsection
-    * "heading" : string : Heading for the whole subsection contents
-    * "include" : string : Whether to include this subsection in the generated policy or not. It contains the ID of the field that dictates the inclusion. In case it is empty the subsection is included regardless. In order to remove the subsection the field's value should be "false".
-    * "inputs" : list : List of inputs to present to user
-      * "id" : string : ID to distinguish this input from other inputs, shall be a unique name
-      * "type" : string : Different type of supported inputs "[text|radio|checkbox]"
-      * "value" : string : The default value for the input
-      * "heading" : string : Heading to be shown on the input
-      * "options" : list : List of options for radio buttons or checkboxes
-        * "id" : string : ID to distinguish this input option, shall be a unique name
-        * "title" : string : Title for this option
-        * "value" : number : value for this option
-    * "content" : list : List of content objects for each subsection
-      * "text" : string : text of the security policy template
-      * "variables" : list : list of the variables in the text
-        * "name" : string : name of the variable as it shows up in the text
-        * "type" : string : type of the variable being string, number, etc.
+
+## Input object:
+* "id" : string : ID to distinguish this input from other inputs, shall be a unique name
+* "type" : string : Different type of supported inputs "[text|radio|checkbox]"
+* "value" : string : The default value for the input
+* "heading" : string : Heading to be shown on the input
+* "options" : list : List of option objects for radio buttons or checkboxes
+
+### Option object:
+* "id" : string : ID to distinguish this input option, shall be a unique name
+* "title" : string : Title for this option
+* "value" : number : value for this option
+
+## Section object:
+* "order" : number : order to show this section on the page
+* "id" : string : ID to distinguish this section from other sections, shall be a unique name
+* "name" : string : Name of the section
+* "subsections" : list : list of subsection objects for this section
+
+### Subsection object:
+* "order" : number : order to show this subsection on the page
+* "id" : string : ID to distinguish this subsection from other subsections, shall be a unique name
+* "title" : string : Title of the subsection
+* "heading" : string : Heading for the whole subsection contents
+* "include" : string : Whether to include this subsection in the generated policy or not. It contains the ID of the field that dictates the inclusion. In case it is empty the subsection is included regardless. In order to remove the subsection the field's value should be "false".
+* "inputs" : list : List of inputs to present to user
+* "content" : list : List of content objects for each subsection
+
+#### Content object:
+* "text" : string : text of the security policy template
+* "variables" : list : list of the variable objects in the text
+* "include": string : Whether to include this text in the generated policy or not. It contains the ID of the field that dictates the inclusion. In case it is empty the subsection is included regardless. In order to remove the subsection the field's value should be "false".
+
+##### Variable object:
+  * "name" : string : name of the variable as it shows up in the text
+  * "type" : string : type of the variable being string, number, etc.
 
 ```json
 {
-    "org_name" : "",
+    "org_name": "",
+    "org_execdir": "",
+    "org_opsdir": "",
+    "staff_secpol": "",
+    "inputs":
+        [
+            {
+            "id": "operating_systems",
+            "type": "checkbox",
+            "value": "",
+            "heading": "What operating systems exist?",
+            "options" :
+                [
+                    {
+                    "id": "",
+                    "title": "Mac OS",
+                    "value": "mac_os"
+                    },
+                    {
+                    "id": "",
+                    "title": "Windows",
+                    "value": "windows"
+                    },
+                    {
+                    "id": "",
+                    "title": "Linux",
+                    "value": "linux"
+                    },
+                    {
+                    "id": "",
+                    "title": "iOS",
+                    "value": "ios"
+                    },
+                    {
+                    "id": "",
+                    "title": "Android",
+                    "value": "android"
+                    }
+                ]
+            },
+            {
+            "id": "services",
+            "type": "checkbox",
+            "value": "",
+            "heading": "What Services are being used in your company?",
+            "options" :
+                [
+                    {
+                    "id": "",
+                    "title": "Service A",
+                    "value": "service_a"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service B",
+                    "value": "service_b"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service C",
+                    "value": "service_c"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service D",
+                    "value": "service_d"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service E",
+                    "value": "service_e"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service F",
+                    "value": "service_f"
+                    }
+                ]
+            }
+        ],
+    "operating_systems": [],
     "sections" : [
         {
         "order": 1,
@@ -131,7 +226,33 @@ The JSON object includes the following properties/objects:
                         {
                         "text" : "All employees, contractors, consultants, temporary, and other workers are responsible for exercising good judgment regarding appropriate use of information, electronic devices, and network resources in accordance with policies and standards, and local laws and regulation.",
                         "variables": []
+                        },
+                        {
+                        "text": "This section should appear if the user is using Service A",
+                        "include": "services.service_a"
+                        },
+                        {
+                        "text": "This section should appear if the user is using Service B",
+                        "include": "services.service_b"
+                        },
+                        {
+                        "text": "This section should appear if the user is using Service C",
+                        "include": "services.service_c"
+                        },
+                        {
+                        "text": "This section should appear if the user is using Service D",
+                        "include": "services.service_d"
+                        },
+                        {
+                        "text": "This section should appear if the user is using Service E",
+                        "include": "services.service_e"
+                        },
+                        {
+                        "text": "This section should appear if the user is using Service F",
+                        "include": "services.service_f"
                         }
+                    },
+
                     ]
                 }
             ]

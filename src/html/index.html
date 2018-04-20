@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CiviCDR Security Policy Generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            try {
+                localStorage.setItem("secpol_test", "test");
+                localStorage.removeItem("secpol_test");
+            }
+            catch(e) {
+                console.log(e);
+                alert("Your browser is not supported. It does not support Local Storage!");
+                return;
+            }
+            try {
+                localStorage.clear();
+            }
+            catch(e) {
+                console.log(e);
+            }
+        });
+    </script>
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-left" href="#">
+          <img class="navbar-logo" src="/images/logo.png" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-pills">
+          <li class="active"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="spacer">&nbsp;</li>
+          <li class="inactive"><a class="nav-link" href="questions.html">Get Started!</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row secpol-box">
+        <div class="col-xs-12 hp-box-header">
+          Security Policy Generator
+        </div>
+        <div class="col-xs-12 hp-box-content">
+          Security Policies are a critical part of every organisation's security strategy. This generator is built to help you create a thorough security policy that is customised to your organisation and work environment.
+          <a class="btn btn-large" href="questions.html">Get started!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-narrow secpol-box">
+    <div class="footer">
+      <div class="row">
+        <div class="col-sm-3 col-sm-push-1">
+          <h5>Security Policy Generator</h5>
+          <img src="/images/logo.png" class="pull-left footer-logo" />
+        </div>
+        <div class="col-sm-7 col-sm-push-1">
+          <h4>How does it work?</h4>
+          <p>When you hit the Get Started! button above, you'll be shown all the sections of a security policy that you might need to protect your organisation. Although some sections will not require any input from you, it's important that you read and understand the entire policy in order to implement it correctly. When you're done, just hit the Create Policy button and you'll be given your custom security policy, ready for further editing, copying and sharing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

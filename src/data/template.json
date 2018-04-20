@@ -1,0 +1,832 @@
+{
+    "org_name": "",
+    "org_execdir": "",
+    "org_opsdir": "",
+    "staff_secpol": "",
+    "inputs":
+        [
+            {
+            "id": "operating_systems",
+            "type": "checkbox",
+            "value": "",
+            "heading": "What operating systems exist?",
+            "options" :
+                [
+                    {
+                    "id": "",
+                    "title": "Mac OS",
+                    "value": "mac_os"
+                    },
+                    {
+                    "id": "",
+                    "title": "Windows",
+                    "value": "windows"
+                    },
+                    {
+                    "id": "",
+                    "title": "Linux",
+                    "value": "linux"
+                    },
+                    {
+                    "id": "",
+                    "title": "iOS",
+                    "value": "ios"
+                    },
+                    {
+                    "id": "",
+                    "title": "Android",
+                    "value": "android"
+                    }
+                ]
+            },
+            {
+            "id": "services",
+            "type": "checkbox",
+            "value": "",
+            "heading": "What Services are being used in your company?",
+            "options" :
+                [
+                    {
+                    "id": "",
+                    "title": "Service A",
+                    "value": "service_a"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service B",
+                    "value": "service_b"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service C",
+                    "value": "service_c"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service D",
+                    "value": "service_d"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service E",
+                    "value": "service_e"
+                    },
+                    {
+                    "id": "",
+                    "title": "Service F",
+                    "value": "service_f"
+                    }
+                ]
+            }
+        ],
+    "operating_systems": [],
+    "sections": 
+        [
+            {
+            "order": 1,
+            "id": "access_policies",
+            "name": "Access Policies",
+            "subsections": 
+                [
+                    {
+                    "order": 1,
+                    "id": "access_workplace",
+                    "title": "Access to where you work",
+                    "heading": "Access to where you work",
+                    "include": "office",
+                    "inputs": 
+                        [
+                            {
+                            "id": "office",
+                            "type": "radio",
+                            "value": "",
+                            "heading": "Do you work in an office?",
+                            "options": 
+                                [
+                                    {
+	                                "id": 1,
+	                                "title": "Yes",
+	                                "value": true
+	                                },
+                                    {
+                                    "id": 2,
+                                    "title": "No",
+                                    "value": false
+                                    }
+                                ]
+                            }
+                        ],
+                    "content": 
+                        [
+                            {
+                            "text": "<h3>I. The office and your desk</h3> <ul><li><strong>Who has the keys, fobs, or PIN to enter the office?</strong></li> <ul><li>Know how many copies of keys or fobs you have, and only provide them, or disclose PINs, to people who are trusted to remain in the office alone</li> <li>Collect the keys or fobs upon staff departure, or change the PIN</li> <li>Avoid lending the keys or fobs to anyone who is not a permanent staff member, and avoid disclosing the PIN</li></ul> <li><strong>Locking up: Desks, doors, cabinets</strong></li> <ul><li>Last one to leave the office locks up</li> <li>Staff should place papers and valuable hardware in a locked desk or cabinet if available</li></ul> <li><strong>Be aware of tailgating and impersonation:</strong> &quot;Social engineers&quot; are people who attempt to manipulate others into taking actions, often using someone’s helpfulness or adherence to routine and respect for authority against them.<br /> A social engineer may attempt to use “tailgating” to enter a building. Tailgating means that as you enter the building the social engineer follows right behind you. Perhaps they rely on your politely holding the door, or the social engineer will rummage through the bag they are holding pretending to look for their key and they are swiped in when someone takes pity on them.<br /> Impersonation is another way in which someone may enter the building. Perhaps they dress as a delivery person or as someone waiting on a job interview. In large enough organizations, it even works to imply they are new to their job, or work in a different department than yours.<br /> Never feel awkward about asking why someone is where they are, or questioning their work. If they are supposed to be there, they’ll understand.</li></ul>"
+                            },
+                            {
+                            "text":"<h3>A home office or personal workspace</h3> <ul><li><strong>Who has access to your home office?</strong><br /> Be aware of who is able to enter your home office, from family to friends, ensure that they understand the confidentiality of your work. If a stranger is in your home, like a housecleaner or plumber, please try to avoid allowing access to your workspace. If the stranger needs workspace access, take precautions before the visit (lock confidential papers away, remove laptops and turn off computers).</li> <li><strong>Locking up desks, drawers, cabinets</strong><br /> At the end of the work day, confidential documents should be locked up and placed out of view if possible. Laptops and computers should be turned off and placed out of sight.</li></ul>"
+                            }
+                        ]
+                    },
+                    {
+                    "order": 2,
+                    "id": "physical_documents",
+                    "title": "Access to physical documents",
+                    "heading": "Access to physical documents",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text":"I. Printed documents Any internal printed documents with [org_name] information should be treated as confidential, and cared for appropriately. Do not leave prints visible in public spaces, and please try to be aware of how private particular information is before you print it -- especially if you are creating copies.  Try not to bring printed versions of confidential documents home, and avoid printed material when working in cafes and other public spaces. Please never leave printed material unattended.  When in the office, please avoid leaving printed documents visibly on top of your desk, and try to secure any documents in a locked desk or cabinet before going home.  II. Destruction of papers If a document is printed, as soon as it is no longer needed please destroy in a paper shredder as soon as possible.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 3,
+                    "id": "devices",
+                    "title": "Devices",
+                    "heading": "Devices",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text":"I. Number of devices Try to reduce the number of devices that have work information on them, including the credentials to your email. Every new device with confidential work accounts or data is a new device that will require protection from loss, theft, and hacking. If possible, a smartphone and computer (laptop, desktop) should be the only two devices used for work information.  [org_name] has provisioned work laptops for staff to ensure that confidential work information stays on those devices, and is not transferred to private devices.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            },
+                            {
+                            "text":"II. Access to devices Ensure that you are the only one who can access the device containing work information. If there is confidential data on the same laptop that others who are not involved with [org_name] use, please remove it.  Include a PIN or passphrase to access any device you have with [org_name] information on it, including smartphones.  When device encryption is enabled, a screen lock passphrase (or PIN) is also created by default. Please see the device encryption section for further details.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 4,
+                    "id": "internet",
+                    "title": "Access to internet",
+                    "heading": "Access to internet",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "Be aware of who has access to your internet connection. If you are in a shared office with other organizations, or your password is posted or freely handed out to guests, the network may not be trustworthy. Working in public spaces (cafes, airports, hotels, libraries) should also be regarded as connecting to untrusted networks, and appropriate action to protect oneself should be taken (see Web Browsing).  Working in a “trusted” environment requires complete knowledge of who is on the network with you, with minimal protections including a gGuest nNetwork being available, secured with WPA-2, and a changing of all third-party provided default settingss (like the default router password changed, admin panel’s default password changed, etc.)."
+                            }
+                        ]
+                    },
+                    {
+                    "order": 5,
+                    "id": "accounts",
+                    "title": "Access to accounts",
+                    "heading": "Access to accounts",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "This section should appear if the user is using Service A",
+                            "include": "services.service_a"
+                            },
+                            {
+                            "text": "This section should appear if the user is using Service B",
+                            "include": "services.service_b"
+                            },
+                            {
+                            "text": "This section should appear if the user is using Service C",
+                            "include": "services.service_c"
+                            },
+                            {
+                            "text": "This section should appear if the user is using Service D",
+                            "include": "services.service_d"
+                            },
+                            {
+                            "text": "This section should appear if the user is using Service E",
+                            "include": "services.service_e"
+                            },
+                            {
+                            "text": "This section should appear if the user is using Service F",
+                            "include": "services.service_f"
+                            }
+                        ]
+                    },
+                    {
+                    "order": 6,
+                    "id": "revoking",
+                    "title": "Revoking access to organizational assets upon departure",
+                    "heading": "Revoking access to organizational assets upon departure",
+                    "include": "",
+                    "inputs": 
+                        [
+                            {
+                            "id": "remove_access_process",
+                            "type": "textarea",
+                            "value": "",
+                            "heading": "The process to remove access?"
+                            },
+                            {
+                            "id": "account_shutdown",
+                            "type": "textarea",
+                            "value": "",
+                            "heading": "Note to shutdown account?"
+                            },
+                            {
+                            "id": "exit_process",
+                            "type": "textarea",
+                            "value": "",
+                            "heading": "Exit process"
+                            }
+                        ],
+                    "content": 
+                        [
+                            {
+                            "text": "On the last day of employment, the [org_opsdir] will ask the employee to put on an out of office noting they are no longer working with [org_name] and providing information on whom to contact. We also ask that they forward their email to the appropriate colleague. [remove_access_process] The email will remain active for 2-3 months, at which time it will be shut-down [account_shutdown] All organizational property should be returned, and any rented offices keys/cards returned and vacated.  Please see the [exit_process] for a detailed overview of the exit process.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "remove_access_process",
+	                                "type": "text"
+                                    },
+                                    {
+                                    "name": "account_shutdown",
+	                                "type": "text"
+                                    },
+                                    {
+                                    "name": "exit_process",
+	                                "type": "text"
+                                    },
+                                    {
+                                    "name": "org_opsdir",
+	                                "type": "text"
+                                    },
+                                    {
+                                    "name": "org_dir",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+            "order": 2,
+            "id": "data_management",
+            "name": "Data management policies",
+            "subsections": 
+                [
+                    {
+                    "order": 1,
+                    "id": "backup",
+                    "title": "Backing up data",
+                    "heading": "Backing up data",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text":"Backups of personal documents and systems can be completed on external media, like a hard drive or USB. Ensure you have encrypted the drive before placing any backups on it. Please back up routinely, at least once a month.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            },
+                            {
+                            "text": "Mac OSX: Time Machine https://support.apple.com/en-us/HT201250",
+                            "variables": [],
+                            "include": "operating_systems.mac_os"
+                            },
+                            {
+                            "text": "iOS: https://support.apple.com/en-us/HT203977",
+                            "variables": [],
+                            "include": "operating_systems.ios_os"
+                            }
+                        ]
+                    },
+                    {
+                    "order": 2,
+                    "id": "transferring_data",
+                    "title": "Transferring data",
+                    "heading": "Transferring data",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "Transfer confidential information securely either by placing it on an external media device and directly handing it off to the intended recipient, or by sending it through an encrypteding an email and sending the information.  Try to ensure all parties involved know to expect the incoming data before they access it. Knowing to expect an attachment helps to prevent phishing attempts where an attachment is the source of malware.  Email Transferring data over the internet is possible through encrypted email, or by encrypting a file and sending it. Ensure the person who is receiving the attachment knows the files are coming. Don’t forget that Subject lines of emails, as well as the To and From, are not encrypted, so never put anything private there.  External Media (USB, hard drive, etc.) Before plugging in, know who had the hard drive last and approximately what is on it. (Remember, never plug any external media into your computer whose origins that you don’t know its origins.) Any external media can be used to transfer data, but after the transfer, the data should be deleted from the external media. Encrypt confidential files, or the entire drive, and while in transit, keep the external media on your person as much as possible. ",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 3,
+                    "id": "data_travelling",
+                    "title": "Travelling",
+                    "heading": "Travelling",
+                    "include": "",
+                    "inputs": 
+                        [
+                            {
+                            "id": "travel_radio",
+                            "type": "radio",
+                            "value": "",
+                            "heading": "Does your staff travel for work?",
+                            "options" :
+                                [
+                                    {
+                                    "id": 1,
+                                    "title": "Yes",
+                                    "value": true
+                                    },
+                                    {
+                                    "id": 2,
+                                    "title": "No",
+                                    "value": false
+                                    }
+                                ]
+                            }
+                        ],
+                    "content": 
+                        [
+                            {
+                            "text": "When traveling, it is essential that one takes extra precautions. This section is only about data management. For full travel recommendations, see Travel Policies and Procedures below.  If you must use public or unsecured wifi, always use a VPN (Virtual Private Network). This is true for all devices, including smartphones.  Recognize that devices may be searched, so ensure full disk encryption is enabled on everything (including on smartphones), and turn devices off when moving through borders. Note that full disk encryption only protects you while your machine is entirely off. Please see below for instructions on how to encrypt.  To transport data securely, ensure all external media areis encrypted. Double- check passcodes are enabled on your laptops and phones.  If you are transferring data through email, encrypt the message and the the file.  Try not to bring devices that have private or compromising data on your travels. If you must, leave any information you will not be using at home.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 4,
+                    "id": "deleting_data",
+                    "title": "Deleting data",
+                    "heading": "Deleting data",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text":"When information is deleted, it is still vulnerable to recovery if not specifically overwritten. If it is important the files are not recoverable, please be sure to use secure deletion practices.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            },
+                            {
+                            "text": "Mac OSX: https://ssd.eff.org/en/module/how-delete-your-data-securely-mac-os-x",
+                            "variables": [],
+                            "include": "operating_systems.mac_os"
+                            },
+                            {
+                            "text": "Windows: https://ssd.eff.org/en/module/how-delete-your-data-securely-windows",
+                            "variables": [],
+                            "include": "operating_systems.windows"
+                            }
+                        ]
+                    },
+                    {
+                    "order": 5,
+                    "id": "device_encryption",
+                    "title": "Device encryption for all devices",
+                    "heading": "Device encryption for all devices",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text":"Device encryption (also called full-disk encryption or FDE) will protect your computer, mobile phone, and tablets against physical access by encrypting your hard drive if your device is lost or stolen. Your device must be turned off for this to work.  Enable full- disk encryption on all devices containing {ORG} information and access (like email) Encrypt your phone and tablets:",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            },
+                            {
+                            "text": "Android",
+                            "variables": [],
+                            "include": "android_os"
+                            },
+                            {
+                            "text": "iOS",
+                            "variables": [],
+                            "include": "ios_os"
+                            },
+                            {
+                            "text": "Windows",
+                            "variables": [],
+                            "include": "operating_systems.windows"
+                            },
+                            {
+                            "text": "Laptops / computers",
+                            "variables": []
+                            },
+                            {
+                            "text": "Mac: encrypt with FileVault",
+                            "variables": [],
+                            "include": "operating_systems.mac_os"
+                            },
+                            {
+                            "text": "Windows",
+                            "variables": [],
+                            "include": "wonspws_os"
+                            },
+                            {
+                            "text": "Linux",
+                            "variables": [],
+                            "include": "linux_os"
+                            }
+                        ]
+                    },
+                    {
+                    "order": 6,
+                    "id": "external_media_encryption",
+                    "title": "Encryption for external media",
+                    "heading": "Encryption for external media",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "If USBs, hard drives, or other external media contain sensitive or confidential information, ensure they are encrypted and kept in safe locations."
+                            },
+                            {
+                            "text": "Mac: encrypt with FileVault",
+                            "include": "operating_systems.mac_os"
+                            },
+                            {
+                            "text": "Cross-platform: Veracrypt",
+                            "include": "all_os"
+                            },
+                            {
+                            "text": "After the information is no longer needed, make sure to delete it securely.  Never loan external media to friends or people outside of the organization, and never plug a stranger’s USB or hard drive into your machine."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+            "order": 3,
+            "id": "comms_policies",
+            "name": "Communications policies and practices",
+            "subsections": 
+                [
+                    {
+                    "order": 1,
+                    "id": "intro_comms",
+                    "title": "Communications policies and practices",
+                    "heading": "Communications policies and practices",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "When communicating with coworkers, members and partners, be aware of their context. Is your coworker traveling? What country is the partner or member in? Will it endanger the partner or member to receive messages from your email? Be sure to take note when evaluating how best to communicate.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 2,
+                    "id": "online_comms",
+                    "title": "Online communication",
+                    "heading": "Online communication",
+                    "include": "",
+                    "inputs":
+                        [
+                            {
+                            "id": "communication_channels",
+                            "type": "checkbox",
+                            "value": "",
+                            "heading": "What communication channels are you using?",
+                            "options" :
+                                [
+                                    {
+                                    "id": "",
+                                    "title": "Email",
+                                    "value": "comch_email"
+                                    },
+                                    {
+                                    "id": "",
+                                    "title": "OTR",
+                                    "value": "comch_otr"
+                                    },
+                                    {
+                                    "id": "",
+                                    "title": "Skype",
+                                    "value": "comch_skype"
+                                    }
+                                ]
+                            }
+                        ],
+                    "content": 
+                        [
+                            {
+                            "text": "Email The To and From addresses in emails, as well as the Subject of the email, may be visible to third-party parties beyond the email providers and your intended recipients, so avoid putting sensitive information in those fields.  Be mindful that your work email address may alert malicious actors to our partners’ existence and whereabouts. Consider other channels of contact if a more subtle approach is important.",
+                            "include": "communication_channels.comch_email",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            },
+                            {
+                            "text": "Video and voice chat Voice communication can be a fast and efficient form of communication with the organization and with external partners. Options such as Google Hangouts (which allows maximum 25 participants) and Jitsi Meet are often satisfactory choices.  Try to avoid using Skype as the default for video and chat communications. Skype has had a number of poor practices that make it easier for users to be targeted or compromised through it, including: easy impersonation of contacts being a separate program rather than a platform that runs in browser When you open attachments and files on the desktop rather than in an online service (like Google Drive for example) you are putting yourself at greater risk of compromise enabling contacts to find your geographic location (IP address) Mobile messaging For mobile messaging, consider using Signal, an encrypted and easy-to-use mobile messaging application. Signal also has a desktop instant messaging option, making it as convenient to use as Hangouts.  Try Open Whisper Systems Signal support page for questions, or the Access Now FAQ.",
+                            "include": "communication_channels.comch_skype"
+                            }
+                        ]
+                    },
+                    {
+                    "order": 3,
+                    "id": "comms_at_risk_partners",
+                    "title": "Communicating with at-risk partners",
+                    "heading": "Communicating with at-risk partners",
+                    "include": "",
+                    "inputs": 
+                        [
+                            {
+                            "id": "risk_partners",
+                            "type": "radio",
+                            "value": "",
+                            "heading": "Do you communicate with at-risk partners?",
+                            "options" :
+                                [
+                                    {
+                                    "id": 1,
+                                    "title": "Yes",
+                                    "value": true
+                                    },
+                                    {
+                                    "id": 2,
+                                    "title": "No",
+                                    "value": false
+                                    }
+                                ]
+                            }
+                        ],
+                    "content": 
+                        [
+                            {
+                            "text": "It is important to be aware of our partners’ individual security contexts when we communicate with them. In trying to protect them and their work, we should always (1) follow their lead and (2) provide communications options.  No one will know their context and the threats they face better than themselves. At the same time, they may have security needs that can only be met by us having more secure communications practices. Letting them know different ways that you can communicate with them -- using non-[org_name] branded accounts, encrypting the content of communications, protecting the location or identity of the partner, etc. - can help them make a more informed decision.  We will be drafting some secure communications workflows for particular partners who we work with.  Please reach out to Access Now’s Helpline team (help@accessnow.org) to craft a tailored strategy for any situation you think may require heightened practices, or if your partner may need support in implementing a particular practice.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 4,
+                    "id": "public_posts",
+                    "title": "Public posts",
+                    "heading": "Web etiquette - Public posts",
+                    "include": "",
+                    "inputs": 
+                        [
+                            {
+                            "id": "social_media",
+                            "type": "radio",
+                            "value": "",
+                            "heading": "Do you post contents on a public website or social networking platform?",
+                            "options" :
+                                [
+                                    {
+                                    "id": 1,
+                                    "title": "Yes",
+                                    "value": true
+                                    },
+                                    {
+                                    "id": 2,
+                                    "title": "No",
+                                    "value": false
+                                    }
+                                ]
+                            }
+                        ],
+                    "content": 
+                        [
+                            {
+                            "text": "When posting publicly, whether personal photos on social media accounts or promotional material for the organization, please be aware of the personal information that may be revealed. Do you have the permission of the people in the photo, or of the photographer, to use their photo? Check the backgrounds of pictures for revealing information (password on a post-it? list of partners' emails?), be sure never to reveal personally identifiable information when discussing partners, and if you’re unsure if something qualifies as private, choose not to post it.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 5,
+                    "id": "online_comms",
+                    "title": "Links and attachments",
+                    "heading": "Web etiquette - Links and attachments",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "When sending links and attachments, try to alert the receiver to their being sent through a second channel, like a phone call or text message. This lets the receiver be reasonably sure it is not a phishing attack.  When receiving links and attachments, try to remain cautious and if you are unsure of the message, or of the sender, do not click on the link. Do your best to verify unsolicited links and attachments by asking the sender through a separate channel if they did indeed send the message.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 6,
+                    "id": "web_browsing",
+                    "title": "Web browsing",
+                    "heading": "Web browsing",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "When browsing the web on any untrusted or open wifi network, including while traveling, in cafes, airports, or hotels, please use a VPN (virtual private network) at all times.  [org_name] will ensure a VPN account is created for you, and that you will receive support through the initial setup. VPNs provide a secure connection to the internet for you to browse safely. Your network traffic to websites and online services will look like it is coming from a different location than where you are, and all data that is sent and received will be protected from snooping on the local network you are connected to (in the cafe, airport, etc.).  If desired, you can use a VPN at all times, even on your home or office network. VPNs may be used on all of your devices, including phones, laptops, tablets, and more.  Browser extensions Consider adding privacy enhancing browser extensions to block ads and trackers which can inadvertently deliver malware, and prefer website connections to HTTPS. Examples include Privacy Badger, HTTPS Everywhere, and adblockers such as uBlock Origin (Firefox, Chrome).",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 7,
+                    "id": "digisec_concerns",
+                    "title": "Digital security concerns",
+                    "heading": "Digital security concerns",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "Suspicious email or suspected phishing If you suspect an email you have received is a phishing attack, or it makes you suspicious that it is not genuine in any way, don't click on any link or download any attachment and please alert the {ORG Director of Operations}.  After alerting the [org_opsdir], please forward the full original email to Access Now’s Helpline Team at help@accessnow.org with the reasons you are concerned.  To forward the full original email, please follow these instructions: https://circl.lu/pub/tr-07/ Once again, be extremely careful not to click on the links nor download attachments from the suspicious message, and don’t forget to alert anyone you are sending the message to about the danger.  Digital security emergencies If a physical emergency happens, please alert the [org_execdir] and refer to [staff_secpol] for the approved channel of contact.  If there is any potential digital security concerns, including clicking a potential phishing or infected link or attachment, please escalate to the [org_execdir] and [org_opsdir] as soon as possible.  It is very important to quickly alert someone to any digital security threat you perceive. It can be hard to admit when one has made a mistake, but if you believe you did something to compromise the organization or a partner or member, it is better to let someone know so the damage can be mitigated. Telling someone about the mistake promptly is the best thing to do.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_opsdir",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            { 
+            "TODO": "this section should appear only if staff travels - can we add a radio button in sections?",
+            "order": 4,
+            "id": "travel_policies",
+            "name": "Travel policies and procedures",
+            "subsections" :
+                [
+                    {
+                    "order": 1,
+                    "id": "travel_intro",
+                    "title": "Introduction",
+                    "heading": "Introduction",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "When traveling, it is especially important to be aware of one’s surroundings, and the local laws governing the destination. At any point, especially when crossing borders, your devices may be searched or taken out of view.  Check out: https://ssd.eff.org/en/module/things-consider-when-crossing-us-border",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 2,
+                    "id": "travel_devices",
+                    "title": "Devices",
+                    "heading": "Devices",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "Full disk encryption becomes essential on all phones, laptops, and tablets. It works when you turn off your device before crossing a border, or entering any travel security checkpoint.  Leave devices that you don't need at home. Try to only bring devices that you are sure are essential to your work. Avoid any devices that hold particularly sensitive or confidential information.  Transport data only on encrypted media. If you are using external media, like USBs, SD cards, and hard drives, encrypt the device before storing anything on it.  Double check all of your devices have passwords, PINS, and codes for access.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                    "order": 3,
+                    "id": "travel_internet",
+                    "title": "Internet use",
+                    "heading": "Internet use",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "When browsing the internet away from home, always use a VPN to connect. Be sure to install the VPN on all phones, laptops, and tablets you’ll be bringing with you.  Clear your cache, cookies, and browsing history across all browsers (mobile phone included): Firefox Chrome Other Browsers Clear passwords from all browsers: Chrome Firefox",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+            "order": 5,
+            "id": "org_culture",
+            "name": "Creating and maintaining an engaged organizational culture",
+            "subsections": 
+                [
+                    {
+                    "order": 1,
+                    "id": "org_culture_intro",
+                    "title": "Creating and maintaining an engaged organizational culture",
+                    "heading": "Creating and maintaining an engaged organizational culture",
+                    "include": "",
+                    "inputs": [],
+                    "content": 
+                        [
+                            {
+                            "text": "To continue to keep the organization safe and secure, please keep good 'security hygiene' in mind. Update all devices promptly and routinely, and remain aware of your surroundings and of where your devices are (hopefully on your person!). Consider installing security enhancing browser extensions, like ad-blockers, and chat with coworkers about their security practices. Speak with partners to find out what their concerns are, and create plans to deal with the immediate threats and risks they face.  Sharing relevant news articles from reputable media, interactive games and quizzes, and community stories all help engage different staff. Have open communications channels with staff to ensure that any questions or issues are raised early.  Remember how everyone in the organization is connected. Your practices at home affect your security at work. Keep your personal email and social media accounts as secure as your work-related ones. You can apply all of the practices for your work devices discussed here to your personal devices.",
+                            "variables":
+                                [
+                                    {
+                                    "name": "org_name",
+	                                "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+}

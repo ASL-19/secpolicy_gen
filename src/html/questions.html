@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CiviCDR Security Policy Generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            window.secpol_subs = Array();
+            window.secpol_vars = Array();
+            window.secpol_inputs = Array();
+            buildTemplate();
+        });
+    </script>
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-left" href="#">
+          <img class="navbar-logo" src="/images/logo.png" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-pills">
+          <li class="inactive"><a class="nav-link" href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row secpol-box gen-box">
+        <div class="col-xs-3 gen-box-header gen-box-first">
+          <a href="#" class="gen-pills gen-pills-active">Survey</a>
+        </div>
+        <div class="col-xs-1 gen-box-header">
+          <span class="gen-pills gen-pills-spacer"></span>
+        </div>
+        <div class="col-xs-3 gen-box-header">
+          <a href="/review.html" class="gen-pills gen-pills-inactive" onclick="storeValues();">Review</a>
+        </div>
+        <div class="col-xs-1 gen-box-header">
+          <span class="gen-pills gen-pills-spacer"></span>
+        </div>
+        <div class="col-xs-3 gen-box-header">
+          <a href="/share.html" class="gen-pills gen-pills-inactive">Share &amp; Copy</a>
+        </div>
+      </div>
+      <div class="row secpol-box gen-box-survey">
+          <div class="col-xs-12 gen-box-content">
+            <h1>Survey Questions</h1>
+            <p>Please take the time to answer the uestions below carefully. The answers will be used to generate your privacy policy</p>
+            <form action="review.html" role="form">
+              <p class="survey-questions" id="survey-radios"><span class="survey-notes">Please select one of the options for the following questions.</span></p>
+              <p class="survey-questions" id="survey-checkboxes"><span class="survey-notes">Please select one or multiple answers for the following questions.</span></p>
+              <p class="survey-questions" id="survey-texts"><span class="survey-notes">Please fill in the text to following questions.</span></p>
+              <button type="button" class="btn btn-review" onclick="storeValues(); location.href='/review.html';">Review Policy</button>
+              <p><span class="survey-notes">Please complete the survey questions before finalizing the privacy policy.</span></p>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body></body>
